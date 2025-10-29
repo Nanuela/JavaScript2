@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canvas Desenhos</title>
+</head>
+
+<body style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 20px; background-color: #e6e6e6;">
+
+<canvas id="Canvas1" width="400" height="300" style="border: 5px solid black; background-color: white;"></canvas>
+<canvas id="Canvas2" width="400" height="300" style="border: 5px solid black; background-color: rgb(173, 216, 230);"></canvas>
+<canvas id="Canvas3" width="400" height="300" style="border: 5px solid black; background-color: white;"></canvas>
+
+<script>
+const canvas1 = document.getElementById("Canvas1")
+const ctx1 = canvas1.getContext("2d")
+
+ctx1.beginPath()
+ctx1.arc(200,150,50,0,Math.PI,true)
+ctx1.fillStyle = "red"
+ctx1.fill()
+ctx1.beginPath()
+ctx1.arc(200,150,50,Math.PI,0,true)
+ctx1.fillStyle = "blue"
+ctx1.fill()
+
+ctx1.strokeStyle = "black"
+ctx1.lineWidth = 6
+
+ctx1.beginPath()
+ctx1.moveTo(80,70)
+ctx1.lineTo(130,70)
+ctx1.moveTo(80,90)
+ctx1.lineTo(130,90)
+ctx1.moveTo(80,110)
+ctx1.lineTo(130,110)
+ctx1.stroke()
+
+ctx1.beginPath()
+ctx1.moveTo(270,190)
+ctx1.lineTo(320,190)
+ctx1.moveTo(270,210)
+ctx1.lineTo(320,210)
+ctx1.moveTo(270,230)
+ctx1.lineTo(320,230)
+ctx1.stroke()
+
+ctx1.beginPath()
+ctx1.moveTo(270,70)
+ctx1.lineTo(320,70)
+ctx1.moveTo(270,110)
+ctx1.lineTo(320,110)
+ctx1.moveTo(270,90)
+ctx1.lineTo(295,90)
+ctx1.moveTo(295,90)
+ctx1.lineTo(320,90)
+ctx1.stroke()
+
+ctx1.beginPath()
+ctx1.moveTo(80,190)
+ctx1.lineTo(130,190)
+ctx1.moveTo(80,230)
+ctx1.lineTo(130,230)
+ctx1.moveTo(80,210)
+ctx1.lineTo(100,210)
+ctx1.moveTo(110,210)
+ctx1.lineTo(130,210)
+ctx1.stroke()
+
+const canvas2 = document.getElementById("Canvas2")
+const ctx2 = canvas2.getContext("2d")
+
+ctx2.fillStyle = "#b5651d"
+ctx2.fillRect(100,150,200,120)
+ctx2.fillStyle = "#3e2723"
+ctx2.fillRect(185,200,30,70)
+ctx2.fillStyle = "#87CEEB"
+ctx2.fillRect(120,170,40,40)
+ctx2.fillRect(240,170,40,40)
+ctx2.beginPath()
+ctx2.moveTo(80,150)
+ctx2.lineTo(200,60)
+ctx2.lineTo(320,150)
+ctx2.closePath()
+ctx2.fillStyle = "#8b0000"
+ctx2.fill()
+ctx2.beginPath()
+ctx2.moveTo(200,270)
+ctx2.lineTo(170,300)
+ctx2.lineTo(230,300)
+ctx2.closePath()
+ctx2.fillStyle = "#a0522d"
+ctx2.fill()
+
+const canvas3 = document.getElementById("Canvas3")
+const ctx3 = canvas3.getContext("2d")
+
+ctx3.beginPath()
+ctx3.arc(200,150,80,0,2*Math.PI)
+ctx3.fillStyle = "#ffeb99"
+ctx3.fill()
+
+ctx3.beginPath()
+ctx3.arc(170,130,10,0,2*Math.PI)
+ctx3.arc(230,130,10,0,2*Math.PI)
+ctx3.fillStyle = "black"
+ctx3.fill()
+
+ctx3.beginPath()
+ctx3.arc(160,160,8,0,2*Math.PI)
+ctx3.arc(240,160,8,0,2*Math.PI)
+ctx3.fillStyle = "pink"
+ctx3.fill()
+
+ctx3.beginPath()
+ctx3.arc(200,160,30,0,Math.PI,false)
+ctx3.lineWidth = 5
+ctx3.strokeStyle = "black"
+ctx3.stroke()
+
+ctx3.beginPath()
+ctx3.moveTo(155,110)
+ctx3.lineTo(185,105)
+ctx3.moveTo(215,105)
+ctx3.lineTo(245,110)
+ctx3.strokeStyle = "black"
+ctx3.lineWidth = 4
+ctx3.stroke()
+</script>
+</body>
+</html>
